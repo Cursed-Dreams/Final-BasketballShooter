@@ -53,8 +53,9 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\ShotPower.cs" />
     <Compile Include="Assets\scripts\timer.cs" />
+    <Compile Include="Assets\scripts\ShotPower.cs" />
+    <Compile Include="Assets\scripts\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

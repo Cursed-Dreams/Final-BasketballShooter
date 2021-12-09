@@ -14,6 +14,7 @@ public class timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         current = start;
         menu.SetActive(false);
     }
