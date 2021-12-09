@@ -8,7 +8,7 @@ PhysicMaterial:
   m_PrefabAsset: {fileID: 0}
   m_Name: ball physics
   dynamicFriction: 0.29
-  staticFriction: 0.18
+  staticFriction: 0.43
   bounciness: 1
   frictionCombine: 0
   bounceCombine: 0

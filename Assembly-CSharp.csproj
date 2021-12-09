@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\ShotPower.cs" />
+    <Compile Include="Assets\scripts\timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

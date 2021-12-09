@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ShotPower : MonoBehaviour
@@ -17,32 +18,42 @@ public class ShotPower : MonoBehaviour
 
     Vector3 orignalpos;
 
-    Vector3 orignalrot;
-
     public GameObject floor;
 
     public GameObject hoop;
 
-    public  scoretext;
+    public Text score;
 
-    private void Start()
-    {
-        orignalpos = gameObject.transform.position;
+    public float number = 0f;
+
+    private void Start() => orignalpos = gameObject.transform.position;
+
+    
+
+    private void OnTriggerEnter(Collider other){
+
         
-    }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (floor != null)
+        if(other.gameObject.CompareTag("floor"))
+        {
             transform.position = orignalpos;
-        ball.velocity = transform.position * 0;
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-        
-        if (hoop != null)
-
-
+            ball.velocity = transform.position * 0;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        }
+        else if (other.gameObject.tag == "hoop")
+        {
+            number = number + 1;
+            score.text = number.ToString();
+        }
     }
+     
+       
+     
+
+
+
+
     void Update()
     {
        
